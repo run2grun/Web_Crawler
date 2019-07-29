@@ -8,7 +8,7 @@ def main(request):
 
 def parse(request):
     url = request.POST.get('parse_url','')
-    res = requests.get('https://ko.wikipedia.org/wiki/'+ url) #해당 url로 GET 요청을 함
+    res = requests.get('https://www.kmdb.or.kr/db/kor/detail/movie/K/15021'+ url) #해당 url로 GET 요청을 함
     
 
     parsed_page = BeautifulSoup(res.content, 'html.parser')
